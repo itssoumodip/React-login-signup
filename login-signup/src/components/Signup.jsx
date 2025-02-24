@@ -13,7 +13,7 @@ const Signup = () => {
             <input
               type="text"
               className="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="John"
+              placeholder="First Name"
             />
           </div>
           <div>
@@ -21,7 +21,7 @@ const Signup = () => {
             <input
               type="text"
               className="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Doe"
+              placeholder="Last Name"
             />
           </div>
         </div>
@@ -31,7 +31,7 @@ const Signup = () => {
           <input
             type="email"
             className="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            placeholder="john@example.com"
+            placeholder="Email address"
           />
         </div>
         
@@ -41,6 +41,15 @@ const Signup = () => {
             type="password"
             className="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Create a password"
+          />
+        </div>
+
+        <div>
+          <label className="text-sm font-medium text-gray-700">Re-Enter Password</label>
+          <input
+            type="password"
+            className="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Re-Enter Created password"
           />
         </div>
         
