@@ -1,9 +1,9 @@
-const Signup = ({ setCurrentForm }) => {
+const Signup = () => {
   return (
     <div className="space-y-6">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900">Create an account</h2>
-        <p className="text-gray-500 mt-2">Join us today!</p>
+        <p className="text-gray-500 mt-2">Please enter your details</p>
       </div>
       
       <form className="space-y-4">
@@ -44,10 +44,7 @@ const Signup = ({ setCurrentForm }) => {
           />
         </div>
         
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200"
-        >
+        <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200">
           Create account
         </button>
       </form>

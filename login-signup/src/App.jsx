@@ -1,11 +1,15 @@
-import { useState } from 'react'
 import './index.css'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import ForgotPassword from './components/ForgotPassword'
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('login')
+  const currentPage = localStorage.getItem('currentPage') || 'login'
+
+  const switchPage = (page) => {
+    localStorage.setItem('currentPage', page)
+    window.location.reload()
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-4">
@@ -14,23 +18,23 @@ function App() {
           <div className="flex justify-center mb-8">
             <div className="bg-gray-100 rounded-lg p-1">
               <button 
-                onClick={() => setCurrentForm('login')}
-                className={`px-6 py-2 rounded-md ${currentForm === 'login' ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
+                onClick={() => switchPage('login')}
+                className={`px-6 py-2 rounded-md ${currentPage === 'login' ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
               >
                 Login
               </button>
               <button 
-                onClick={() => setCurrentForm('signup')}
-                className={`px-6 py-2 rounded-md ${currentForm === 'signup' ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
+                onClick={() => switchPage('signup')}
+                className={`px-6 py-2 rounded-md ${currentPage === 'signup' ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
               >
                 Signup
               </button>
             </div>
           </div>
           
-          {currentForm === 'login' && <Login setCurrentForm={setCurrentForm} />}
-          {currentForm === 'signup' && <Signup setCurrentForm={setCurrentForm} />}
-          {currentForm === 'forgot' && <ForgotPassword setCurrentForm={setCurrentForm} />}
+          {currentPage === 'login' && <Login switchPage={switchPage} />}
+          {currentPage === 'signup' && <Signup switchPage={switchPage} />}
+          {currentPage === 'forgot' && <ForgotPassword switchPage={switchPage} />}
         </div>
       </div>
     </div>

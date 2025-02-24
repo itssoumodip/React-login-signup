@@ -1,4 +1,4 @@
-const ForgotPassword = ({ setCurrentForm }) => {
+const ForgotPassword = () => {
   return (
     <div className="space-y-6">
       <div className="text-center">
@@ -16,18 +16,11 @@ const ForgotPassword = ({ setCurrentForm }) => {
           />
         </div>
         
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200"
-        >
+        <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200">
           Send Reset Link
         </button>
         
-        <button
-          type="button"
-          onClick={() => setCurrentForm('login')}
-          className="w-full text-gray-600 py-3 rounded-lg hover:bg-gray-50 transition duration-200"
-        >
+        <button type="button" className="w-full text-gray-600 py-3 rounded-lg hover:bg-gray-50 transition duration-200">
           Back to Login
         </button>
       </form>

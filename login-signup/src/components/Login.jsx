@@ -1,4 +1,4 @@
-const Login = ({ setCurrentForm }) => {
+const Login = ({ switchPage }) => {
   return (
     <div className="space-y-6">
       <div className="text-center">
@@ -30,21 +30,29 @@ const Login = ({ setCurrentForm }) => {
             <input type="checkbox" className="rounded text-blue-600" />
             <span className="ml-2 text-sm text-gray-600">Remember me</span>
           </label>
-          <button
-            type="button"
-            onClick={() => setCurrentForm('forgot')}
+          <button 
+            type="button" 
+            onClick={() => switchPage('forgot')}
             className="text-sm text-blue-600 hover:text-blue-500"
           >
             Forgot password?
           </button>
         </div>
         
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200"
-        >
+        <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200">
           Sign in
         </button>
+        
+        <p className="text-center text-sm text-gray-600">
+          Don't have an account?{' '}
+          <button 
+            type="button"
+            onClick={() => switchPage('signup')}
+            className="text-blue-600 hover:text-blue-500"
+          >
+            Sign up
+          </button>
+        </p>
       </form>
     </div>
   )
