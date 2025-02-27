@@ -1,4 +1,4 @@
-const Login = ({ switchPage }) => {
+const Login = ({ onForgotPassword, switchPage }) => {
   return (
     <div className="space-y-6">
       <div className="text-center">
@@ -32,7 +32,7 @@ const Login = ({ switchPage }) => {
           </label>
           <button 
             type="button" 
-            onClick={() => switchPage('forgot')}
+            onClick={() => onForgotPassword()} 
             className="text-sm text-blue-600 hover:text-blue-500"
           >
             Forgot password?

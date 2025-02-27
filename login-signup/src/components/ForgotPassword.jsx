@@ -1,4 +1,4 @@
-const ForgotPassword = () => {
+const ForgotPassword = ({ onBackToLogin }) => {
   return (
     <div className="space-y-6">
       <div className="text-center">
@@ -19,7 +19,11 @@ const ForgotPassword = () => {
           Send Reset Link
         </button>
         
-        <button type="button" className="w-full text-gray-600 py-3 rounded-lg hover:bg-gray-50 transition duration-200">
+        <button 
+          type="button" 
+          onClick={onBackToLogin}
+          className="w-full text-gray-600 py-3 rounded-lg hover:bg-gray-50 transition duration-200"
+        >
           Back to Login
         </button>
       </form>
