@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-4">
       {/* Toggle Button */}
-      <div className="absolute top-8 right-8">
+      <div className="absolute top-19 m-auto">
         <ToggleButton 
           isChecked={isFlipped} 
           onChange={handleFlip}
@@ -29,12 +29,6 @@ function App() {
           <div className="absolute w-full h-full backface-hidden">
             <div className="bg-white rounded-xl shadow-lg p-8 h-full">
               <Login />
-              <button 
-                onClick={handleFlip}
-                className="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-              >
-                Sign Up →
-              </button>
             </div>
           </div>
 
@@ -42,12 +36,6 @@ function App() {
           <div className="absolute w-full h-full backface-hidden rotate-y-180">
             <div className="bg-white rounded-xl shadow-lg p-8 h-full">
               <Signup />
-              <button 
-                onClick={handleFlip}
-                className="absolute bottom-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-              >
-                ← Login
-              </button>
             </div>
           </div>
         </div>

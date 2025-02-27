@@ -19,19 +19,12 @@ const ToggleButton = ({ isChecked, onChange }) => {
             text-xs font-bold text-white
             rounded-full transition-all duration-300 ease-in-out
             ${isChecked 
-              ? 'translate-x-[38px] bg-red-500' 
+              ? 'translate-x-[38px] bg-blue-500' 
               : 'translate-x-0 bg-blue-500'
             }
-          `}>
-            {isChecked ? 'NO' : 'YES'}
+          `}>    
           </span>
         </div>
-        
-        {/* Background Layer */}
-        <div className={`
-          absolute w-full h-full transition-all duration-300
-          ${isChecked ? 'bg-red-100' : 'bg-blue-100'}
-        `}/>
       </div>
     </div>
   )
