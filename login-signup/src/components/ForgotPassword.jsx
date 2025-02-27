@@ -3,7 +3,6 @@ const ForgotPassword = () => {
     <div className="space-y-6">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900">Reset Password</h2>
-        <p className="text-gray-500 mt-2">We'll send you reset instructions</p>
       </div>
       
       <form className="space-y-4">
