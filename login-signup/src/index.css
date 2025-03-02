@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for 3D flip effect */
 .perspective {
   perspective: 1000px;
 }
